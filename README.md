@@ -40,3 +40,30 @@ NodeJS
 Yeoman
 generator-aspnet (enables yo aspnet)
 DNVM (.NET Version Manager)
+
+### Then what do I do?
+You can get a dnx runtime by doing either of the following
+
+     # Install DNX for mono
+     dnvm install latest -r mono
+
+     # Install DNX for coreclr
+     dnvm install latest -r coreclr
+
+As of Septmember 29, 2015, you'll get beta 7.
+
+Then you can do the equivalent of "File > New Project" using Yeoman
+
+     yo aspnet
+     
+Select the WebApplicationBasic if you want to see a web site.
+
+Restore project dependencies with
+
+     dnu restore
+     
+And run the project in the Kestrel HTTP Server with
+
+     dnx kestrel
+     
+If you have a desktop environment installed (Ubunti Desktop or CentOS with GNOME Desktop have been tested, open Firefox and try http://localhost:5000 and there is your first ASP.NET 5 site on Linux!
