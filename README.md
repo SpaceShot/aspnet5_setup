@@ -26,6 +26,7 @@ Check the "Get moving fast" commands to get going easily on a terminal only serv
 [aspnet5_setup_centos.sh] (https://github.com/SpaceShot/aspnet5_setup/blob/master/aspnet5_setup_centos.sh)
 
 (Tested on CentOS 7.1 1503.  Tested a minimal installation and an installation with GNOME Desktop)
+
 (Tested on Fedora Server 22.  Tested "Fedora Server" installation)
 
 #####Get moving fast by running
