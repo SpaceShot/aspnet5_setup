@@ -1,11 +1,16 @@
 # aspnet5_setup
-Setup scripts and notes for ASP.NET 5 on different platforms
+Setup scripts and notes for ASP.NET 5 on different platforms.
+__Note: This is a personal project not affiliated with ASP.NET__
 
 ## Goals
+I wanted to easily bring up DNX on fresh installations, and scripting them means I can repeat the process endlessly AND have the steps documented in the script.
+
 Automated scipting of setting up a new operating system install with ASP.NET 5 and some utilities to let you go right to work.
 Check the "Get moving fast" commands to get going easily on a terminal only server.
 
 ## Scripts
+
+**Note: This has been tested with beta 7 of ASP.NET 5.  See the [ASP.NET Roadmap] (https://github.com/aspnet/Home/wiki/Roadmap) and [Announcements] (https://github.com/aspnet/Announcements) for more information.**
 
 ### Ubuntu 
 [aspnet5_setup_ubuntu.sh] (https://github.com/SpaceShot/aspnet5_setup/blob/master/aspnet5_setup_ubuntu.sh)
@@ -28,18 +33,18 @@ Check the "Get moving fast" commands to get going easily on a terminal only serv
 ### Mono issues
 [mono_threads_boost.sh] (https://github.com/SpaceShot/aspnet5_setup/blob/master/mono_threads_boost.sh)
 
-dnu restore has often failed for me with many http timeout errors.  Boosting the MONO_THREADS_PER_CPU variable solves this for me.  This script automates the task of finding where to put this environment vaariable.  I took this idea from the DNVM setup script, which determines where it wants to add a command alias so it can be launched easily.  (Suggestions welcome!)
+dnu restore has often failed for me with many http timeout errors.  Boosting the MONO_THREADS_PER_CPU variable solves this for me.  This script automates the task of finding where to put this environment variable.  I took this idea from the DNVM setup script, which determines where it wants to add a command alias so it can be launched easily.  (Suggestions welcome!)
 
 ### What gets installed?
 Currently, this repository only deals with ASP.NET 5 on Linux, so this will get reorganized when I add Windows support.
 
-Mono - to run DNX on Mono
-CoreCLR dependencies - to run DNX on .NET Core
-Libuv - to support Kestrel
-NodeJS
-Yeoman
-generator-aspnet (enables yo aspnet)
-DNVM (.NET Version Manager)
+* Mono - to run DNX on Mono
+* CoreCLR dependencies - to run DNX on .NET Core
+* Libuv - to support Kestrel
+* NodeJS
+* Yeoman
+* generator-aspnet (enables yo aspnet)
+* DNVM (.NET Version Manager)
 
 ### Then what do I do?
 You can get a dnx runtime by doing either of the following
