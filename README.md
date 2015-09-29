@@ -58,7 +58,7 @@ You can get a dnx runtime by doing either of the following
      # Install DNX for coreclr
      dnvm install latest -r coreclr
 
-As of Septmember 29, 2015, you'll get beta 7.
+As of September 29, 2015, you'll get beta 7.
 
 Then you can do the equivalent of "File > New Project" using Yeoman
 
