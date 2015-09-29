@@ -22,10 +22,11 @@ Check the "Get moving fast" commands to get going easily on a terminal only serv
      curl -L http://bit.ly/1PLOznT > install_aspnet5.sh
      bash install_aspnet5.sh
 
-### CentOS 
+### CentOS and Fedora
 [aspnet5_setup_centos.sh] (https://github.com/SpaceShot/aspnet5_setup/blob/master/aspnet5_setup_centos.sh)
 
 (Tested on CentOS 7.1 1503.  Tested a minimal installation and an installation with GNOME Desktop)
+(Tested on Fedora Server 22.  Tested "Fedora Server" installation)
 
 #####Get moving fast by running
      curl -L http://bit.ly/1P43agq > install_aspnet5.sh
