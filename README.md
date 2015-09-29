@@ -56,7 +56,7 @@ Then you can do the equivalent of "File > New Project" using Yeoman
 
      yo aspnet
      
-Select the WebApplicationBasic if you want to see a web site.
+Select the WebApplicationBasic if you want to see a web site.  Use "cd" to change to the new project folder.
 
 Restore project dependencies with
 
@@ -66,4 +66,7 @@ And run the project in the Kestrel HTTP Server with
 
      dnx kestrel
      
-If you have a desktop environment installed (Ubunti Desktop or CentOS with GNOME Desktop have been tested, open Firefox and try http://localhost:5000 and there is your first ASP.NET 5 site on Linux!
+If you have a desktop environment installed (Ubuntu Desktop or CentOS with GNOME Desktop have been tested, open Firefox and try http://localhost:5000 and there is your first ASP.NET 5 site on Linux!
+
+### Coming Soon
+More help on more platforms, including Nano Server
