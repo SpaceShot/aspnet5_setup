@@ -1,5 +1,5 @@
 # aspnet5_setup
-Setup scripts and notes for ASP.NET 5 on different platforms.
+Setup scripts and notes to try out ASP.NET 5 on different platforms.
 
 __Note: This is a personal project not affiliated with ASP.NET__
 
@@ -9,14 +9,18 @@ I wanted to easily bring up DNX on fresh installations, and scripting them means
 Automated scipting of setting up a new operating system install with ASP.NET 5 and some utilities to let you go right to work.
 Check the "Get moving fast" commands to get going easily on a terminal only server.
 
+**Note: See the [ASP.NET Roadmap] (https://github.com/aspnet/Home/wiki/Roadmap) and [Announcements] (https://github.com/aspnet/Announcements) for more information.**
+
+This does NOT document best practices and frankly is NOT how this should run in production.  This gets you started with a simple project fast, perhaps in a VM for exploration and testing.
+
 ## Scripts
 
-**Note: This has been tested with beta 7 of ASP.NET 5.  See the [ASP.NET Roadmap] (https://github.com/aspnet/Home/wiki/Roadmap) and [Announcements] (https://github.com/aspnet/Announcements) for more information.**
-
-### Ubuntu 
+### Ubuntu and derivatives
 [aspnet5_setup_ubuntu.sh] (https://github.com/SpaceShot/aspnet5_setup/blob/master/aspnet5_setup_ubuntu.sh)
 
-(Tested on Ubuntu 14.04 LTS Desktop)
+Tested on Ubuntu 14.04 LTS Desktop
+     1.0.0-beta8 mono works with WebApplicationBasic from generator-aspnet (yo aspnet)
+     1.0.0-beta8 coreclr works with WebApplicationBasic from generator-aspnet (yo aspnet)
 
 #####Get moving fast by running
      curl -L http://bit.ly/1PLOznT > install_aspnet5.sh
@@ -25,9 +29,11 @@ Check the "Get moving fast" commands to get going easily on a terminal only serv
 ### CentOS and Fedora
 [aspnet5_setup_centos.sh] (https://github.com/SpaceShot/aspnet5_setup/blob/master/aspnet5_setup_centos.sh)
 
-(Tested on CentOS 7.1 1503.  Tested a minimal installation and an installation with GNOME Desktop)
-
-(Tested on Fedora Server 22.  Tested "Fedora Server" installation)
+Tested on CentOS 7.1 1503 with GNOME Desktop
+Tested on CentOS 7.1 1503 with minimal installation
+Tested on Fedora Server 22 - "Fedora Server" installation
+     1.0.0-beta8 mono works with WebApplicationBasic from generator-aspnet (yo aspnet)
+     1.0.0-beta8 coreclr
 
 #####Get moving fast by running
      curl -L http://bit.ly/1P43agq > install_aspnet5.sh
@@ -37,6 +43,8 @@ Check the "Get moving fast" commands to get going easily on a terminal only serv
 [mono_threads_boost.sh] (https://github.com/SpaceShot/aspnet5_setup/blob/master/mono_threads_boost.sh)
 
 dnu restore has often failed for me with many http timeout errors.  Boosting the MONO_THREADS_PER_CPU variable solves this for me.  This script automates the task of finding where to put this environment variable.  I took this idea from the DNVM setup script, which determines where it wants to add a command alias so it can be launched easily.  (Suggestions welcome!)
+
+As of beta 8, I have not needed to use this technique any longer.
 
 ### What gets installed?
 Currently, this repository only deals with ASP.NET 5 on Linux, so this will get reorganized when I add Windows support.
@@ -58,7 +66,7 @@ You can get a dnx runtime by doing either of the following
      # Install DNX for coreclr
      dnvm install latest -r coreclr
 
-As of September 29, 2015, you'll get beta 7.
+As of last change to this README.md, you'll get beta 8.
 
 Then you can do the equivalent of "File > New Project" using Yeoman
 
@@ -72,9 +80,9 @@ Restore project dependencies with
      
 And run the project in the Kestrel HTTP Server with
 
-     dnx kestrel
+     dnx web
      
-If you have a desktop environment installed (Ubuntu Desktop or CentOS with GNOME Desktop have been tested, open Firefox and try http://localhost:5000 and there is your first ASP.NET 5 site on Linux!
+If you have a desktop environment installed, open Firefox and try http://localhost:5000 and there is your first ASP.NET 5 site on Linux!  If you don't, you can open firewall port so another machine can connect to it.
 
 ### Coming Soon
 More help on more platforms, including Nano Server
