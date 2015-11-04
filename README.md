@@ -19,8 +19,10 @@ This does NOT document best practices and frankly is NOT how this should run in 
 [aspnet5_setup_ubuntu.sh] (https://github.com/SpaceShot/aspnet5_setup/blob/master/aspnet5_setup_ubuntu.sh)
 
 Tested on Ubuntu 14.04 LTS Desktop
-     1.0.0-beta8 mono works with WebApplicationBasic from generator-aspnet (yo aspnet)
-     1.0.0-beta8 coreclr works with WebApplicationBasic from generator-aspnet (yo aspnet)
+
+1.0.0-beta8 mono works with WebApplicationBasic from generator-aspnet (yo aspnet)
+     
+1.0.0-beta8 coreclr works with WebApplicationBasic from generator-aspnet (yo aspnet)
 
 #####Get moving fast by running
      curl -L http://bit.ly/1PLOznT > install_aspnet5.sh
@@ -30,10 +32,14 @@ Tested on Ubuntu 14.04 LTS Desktop
 [aspnet5_setup_centos.sh] (https://github.com/SpaceShot/aspnet5_setup/blob/master/aspnet5_setup_centos.sh)
 
 Tested on CentOS 7.1 1503 with GNOME Desktop
+
 Tested on CentOS 7.1 1503 with minimal installation
+
 Tested on Fedora Server 22 - "Fedora Server" installation
-     1.0.0-beta8 mono works with WebApplicationBasic from generator-aspnet (yo aspnet)
-     1.0.0-beta8 coreclr
+
+1.0.0-beta8 mono works with WebApplicationBasic from generator-aspnet (yo aspnet)
+     
+1.0.0-beta7 coreclr works with WebApplicationBasic from generator-aspnet (yo aspnet)
 
 #####Get moving fast by running
      curl -L http://bit.ly/1P43agq > install_aspnet5.sh
