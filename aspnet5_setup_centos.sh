@@ -71,12 +71,12 @@ cd ~/
 sudo ln -s /usr/lib64/libdl.so.2 /usr/lib64/libdl
 sudo ln -s /usr/local/lib/libuv.so /usr/lib64/libuv.so.1
 
-## rpm for node 0.12 on centos from nodesource
-sudo rpm -ivh https://rpm.nodesource.com/pub_0.12/el/7/x86_64/nodejs-0.12.7-1nodesource.el7.centos.x86_64.rpm
+## install nodejs from packagemanager
+sudo curl --silent --location https://rpm.nodesource.com/setup | sudo bash -
+sudo yum -y install nodejs
 
 ## yeoman and aspnet generators
-sudo npm install -g yo
-sudo npm install -g generator-aspnet
+sudo npm install -g yo generator-aspnet
 
 ## install unzip before installing any dnx versions
 sudo yum install -y unzip
